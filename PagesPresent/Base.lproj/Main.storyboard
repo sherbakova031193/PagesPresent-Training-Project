@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +10,110 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PagesPresent" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t6x-j2-yf9">
+                                <rect key="frame" x="69.5" y="329" width="275" height="76"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="275" id="3iI-qp-FKq"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SnellRoundhand-Black" family="Snell Roundhand" pointSize="60"/>
+                                <color key="textColor" red="0.32369780539999998" green="0.1063579395" blue="0.574860394" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.47684186699999997" green="0.50480759139999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="t6x-j2-yf9" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="285" id="Ri1-Cg-QGJ"/>
+                            <constraint firstItem="t6x-j2-yf9" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="VEH-Vp-030"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="118.52678571428571"/>
+        </scene>
+        <!--Page View Controller-->
+        <scene sceneID="yjX-jD-DOo">
+            <objects>
+                <pageViewController storyboardIdentifier="PageViewController" autoresizesArchivedViewToFullSize="NO" modalTransitionStyle="flipHorizontal" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="Lzb-ia-A2t" customClass="PageViewController" customModule="PagesPresent" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vYP-04-9xq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="864" y="119"/>
+        </scene>
+        <!--Content View Controller-->
+        <scene sceneID="POg-Di-SKG">
+            <objects>
+                <viewController storyboardIdentifier="ContentViewController" modalTransitionStyle="flipHorizontal" id="Rla-PZ-fhh" customClass="ContentViewController" customModule="PagesPresent" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wjJ-k3-iAf">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Много, много, очень много текста. Очеень" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7kF-2U-sd9">
+                                <rect key="frame" x="20" y="144" width="374" height="61"/>
+                                <fontDescription key="fontDescription" name="SnellRoundhand-Bold" family="Snell Roundhand" pointSize="24"/>
+                                <color key="textColor" red="0.32369780539999998" green="0.1063579395" blue="0.574860394" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="287-Zm-Cd3">
+                                <rect key="frame" x="162.5" y="788" width="89" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="89" id="nNb-gg-Dcr"/>
+                                </constraints>
+                                <color key="pageIndicatorTintColor" red="0.55030634801908651" green="0.17553741013220481" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="currentPageIndicatorTintColor" red="0.32369780539999998" green="0.1063579395" blue="0.574860394" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </pageControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="👋🏻" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CF0-RC-S8A">
+                                <rect key="frame" x="153" y="388" width="108" height="120"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="tIG-cC-vyu"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="100"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NmD-wb-hNY">
+                                <rect key="frame" x="127.5" y="701" width="159" height="52"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="Sf7-9a-O9H"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="159" id="YwH-1k-zLf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Начать работу"/>
+                                <connections>
+                                    <action selector="closePresetation:" destination="Rla-PZ-fhh" eventType="touchUpInside" id="bVY-CS-sV1"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.52387842226420134" green="0.66676200370869898" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="7kF-2U-sd9" firstAttribute="top" secondItem="wqB-eS-imd" secondAttribute="top" constant="100" id="2bj-Oc-V6z"/>
+                            <constraint firstItem="CF0-RC-S8A" firstAttribute="top" relation="lessThanOrEqual" secondItem="7kF-2U-sd9" secondAttribute="bottom" constant="183" id="40m-eF-wPa"/>
+                            <constraint firstItem="287-Zm-Cd3" firstAttribute="centerX" secondItem="wqB-eS-imd" secondAttribute="centerX" id="Ctq-Ps-O6G"/>
+                            <constraint firstItem="wqB-eS-imd" firstAttribute="trailing" secondItem="7kF-2U-sd9" secondAttribute="trailing" constant="20" id="E3T-Qh-3vo"/>
+                            <constraint firstItem="287-Zm-Cd3" firstAttribute="top" secondItem="NmD-wb-hNY" secondAttribute="bottom" constant="35" id="GUg-sw-xkJ"/>
+                            <constraint firstItem="CF0-RC-S8A" firstAttribute="centerX" secondItem="wqB-eS-imd" secondAttribute="centerX" id="Ro8-Lp-lHK"/>
+                            <constraint firstItem="wqB-eS-imd" firstAttribute="bottom" secondItem="287-Zm-Cd3" secondAttribute="bottom" constant="37" id="Trk-EB-MIm"/>
+                            <constraint firstItem="287-Zm-Cd3" firstAttribute="top" relation="lessThanOrEqual" secondItem="CF0-RC-S8A" secondAttribute="bottom" constant="280" id="bcK-mW-5M9"/>
+                            <constraint firstItem="7kF-2U-sd9" firstAttribute="leading" secondItem="wqB-eS-imd" secondAttribute="leading" constant="20" id="fxs-rh-BHu"/>
+                            <constraint firstItem="NmD-wb-hNY" firstAttribute="centerX" secondItem="wqB-eS-imd" secondAttribute="centerX" id="kQH-9m-VeG"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="wqB-eS-imd"/>
+                    </view>
+                    <connections>
+                        <outlet property="button" destination="NmD-wb-hNY" id="YSf-XB-khf"/>
+                        <outlet property="emojiLabel" destination="CF0-RC-S8A" id="RzB-VU-MZm"/>
+                        <outlet property="pageControl" destination="287-Zm-Cd3" id="83B-3C-91g"/>
+                        <outlet property="presentLabel" destination="7kF-2U-sd9" id="nYy-f3-GAe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gWn-3B-XnN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1582.608695652174" y="125.89285714285714"/>
         </scene>
     </scenes>
 </document>
